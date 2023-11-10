@@ -57,6 +57,12 @@ export default function BaseLayout() {
           >
             <GitHubIcon size={40} />
           </a>
+          <a href="https://www.producthunt.com/posts/gpthub?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gpthub" target="_blank">
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=424710&theme=light" alt="GPTHub | Product Hunt"
+              className="w-[180px]"
+            />
+          </a>
         </div>
       </header>
       <main className="pt-[80px]">
