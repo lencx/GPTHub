@@ -2,7 +2,8 @@
 import { useRoutes } from 'react-router-dom';
 
 import GPTs from '@views/GPTs';
-import Home from '@views/Home';
+import GPTDetail from '@views/GPTDetail';
+// import Home from '@views/Home';
 
 type RouteObject = {
   path: string;
@@ -17,8 +18,12 @@ export const routes: Array<RouteObject> = [
     element: <GPTs />,
   },
   {
+    path: '/gpts/:id',
+    element: <GPTDetail />,
+  },
+  {
     path: '/',
-    element: <Home />,
+    element: <GPTs />,
   },
 ];
 

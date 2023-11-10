@@ -1,5 +1,3 @@
-<h1 align="center">
+<h3 align="center">
 <img width="200" src="./public/gpthub.png">
-
-<b>GPTHub</b>
-</h1>
+</h3>
