@@ -23,8 +23,10 @@
     /* Alias */
     "baseUrl": ".",
     "paths": {
+      "@@/*": ["./*"],
       "@/*": ["src/*"],
       "@views/*": ["src/views/*"],
+      "@icons/*": ["src/icons/*"],
       "@components/*": ["src/components/*"],
     },
   },

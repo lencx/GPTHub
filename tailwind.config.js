@@ -8,7 +8,14 @@ export default {
   theme: {
     extend: {},
   },
+  darkMode: 'class',
+  daisyui: {
+    themes: ['cupcake', 'dracula'],
+    darkTheme: 'dracula',
+  },
   plugins: [
-    require("daisyui"),
+    require('@tailwindcss/typography'),
+    require('autoprefixer'),
+    require('daisyui'),
   ],
 }

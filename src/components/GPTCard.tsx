@@ -1,33 +1,39 @@
-import {} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const getId = (url: string) => {
-  if (!url) return '';
-  const id = url.split('https://chat.openai.com/g/')?.[1];
-  return id;
-}
+import DetailIcon from '@icons/Detail';
+import OpenAIIcon from '@icons/OpenAI';
+import GPTTools from '@components/GPTTools';
+import { gptLink, gptLogo } from '@/utils';
 
-export default function GPTCard({
-  link,
-  name,
-  description,
-  icon,
-}: GPTHub.GPTInfo) {
+export default function GPTCard(gptInfo: GPTHub.GPTInfo) {
+  const { id, name, description, logo, author } = gptInfo;
   const navigate = useNavigate();
 
-  const handleDetail = () => {
-    const id = getId(link);
-    navigate(`/gpts/${id}`);
-  }
-
   return (
-    <div className="card card-side shadow-lg hover:shadow-2xl transition duration-500 ease-in-out">
-      <figure className="p-[10px] min-w-[80px] max-w-[120px]"><img className="rounded-full" src={icon} alt={name} /></figure>
+    <div className="card card-side shadow-md transition duration-500 ease-in-out shadow-slate-500/30">
+      <figure className="pl-6 w-[100px] min-w-[100px] max-w-[100px]">
+        <LazyLoadImage className="rounded-full" src={gptLogo(logo)} alt={name} />
+      </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <p>{description}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary" onClick={handleDetail}>Detail</button>
+        <h2 className="card-title justify-between">{name}</h2>
+        <GPTTools data={gptInfo} size="sm" />
+        <p className="py-2">{description}</p>
+        <div className="card-actions justify-between">
+          <span className="text-sm text-slate-400 dark:text-slate-500">By {author}</span>
+          <div className="flex gap-3">
+            <DetailIcon
+              className="action"
+              size={24}
+              onClick={() => navigate(`/gpts/${id}`)}
+            />
+            <a href={gptLink(id)}>
+              <OpenAIIcon
+                className="action"
+                size={24}
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

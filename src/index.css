@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .action {
+    @apply cursor-pointer text-slate-400 dark:text-slate-500 transition-all duration-300 ease-in-out;
+  }
+  .action:hover {
+    @apply text-[#10a37f];
+  }
+}
