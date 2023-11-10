@@ -26,10 +26,16 @@ export default function GPTs() {
         <span className="text-sm text-slate-500/80 dark:text-slate-400/50">{dayjs(gptInfo.updated_at).format('YYYY/MM/DD')}</span>
       </div>
       <GPTTools data={gptInfo} />
-      <p className="text-lg my-3">{gptInfo.description}</p>
-      <div className="my-3">Welcome Message: {gptInfo?.welcome_message}</div>
+      <div className="my-3">
+        <b className="text-teal-600 mr-3">Description:</b>
+        {gptInfo.description}
+      </div>
+      <div className="my-3">
+        <b className="text-teal-600 mr-3">Welcome Message:</b>
+        {gptInfo?.welcome_message}
+      </div>
       <GPTPrompts data={gptInfo} />
-      <div className="relative w-full h-[500px] border-sky-600/50 border-2 rounded-2xl pointer-events-none select-none overflow-hidden mt-3">
+      <div className="relative w-full min-h-[600px] border-sky-600/50 border-2 rounded-2xl pointer-events-none select-none overflow-hidden mt-3">
         <iframe
           className="absolute inset-0 w-full h-full"
           src={link}

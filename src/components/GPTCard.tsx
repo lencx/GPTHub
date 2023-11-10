@@ -18,7 +18,7 @@ export default function GPTCard(gptInfo: GPTHub.GPTInfo) {
       <div className="card-body">
         <h2 className="card-title justify-between">{name}</h2>
         <GPTTools data={gptInfo} size="sm" />
-        <p className="py-2">{description}</p>
+        <p className="my-2 line-clamp-3" title={description || ''}>{description}</p>
         <div className="card-actions justify-between">
           <span className="text-sm text-slate-400 dark:text-slate-500">By {author || 'community builder'}</span>
           <div className="flex gap-3">

@@ -7,7 +7,7 @@ export default function GPTPrompts({ data }: GPTPromptsProps) {
 
   return (
     <div className="border-3 text-left">
-      <h3>Prompts:</h3>
+      <b className="text-teal-600">Prompts:</b>
       <ul className="pl-5">
         {data?.prompt_starters?.map((item) => {
           return (
