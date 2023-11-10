@@ -8,11 +8,13 @@ interface GPTToolsProps {
 }
 
 export default function GPTTools({ data, size = 'md' }: GPTToolsProps) {
+  if (!data?.tools?.length) return null;
+
   return (
     <div className="flex gap-2 mt-2">
       {data?.tools?.map((item) => {
+        if (!item) return null;
         const el = toolList?.[item-1];
-        if (!el) return null;
         return (
           <div key={item} className={clsx('badge', {
             'badge-sm': size === 'sm',
