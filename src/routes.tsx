@@ -14,11 +14,11 @@ type RouteObject = {
 
 export const routes: Array<RouteObject> = [
   {
-    path: '/gpts',
+    path: '/gpthub/gpts',
     element: <GPTs />,
   },
   {
-    path: '/gpts/:id',
+    path: '/gpthub/gpts/:id',
     element: <GPTDetail />,
   },
   {
