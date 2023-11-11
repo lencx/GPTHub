@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import { debounce } from 'lodash';
 
 import GPTCard from '@components/GPTCard';
+import GPTHubNote from '@components/GPTHubNote';
 import gptsData from '@@/gpthub.json';
 
 function createSearchRegex(searchTerm: string) {
@@ -35,7 +36,8 @@ export default function GPTs() {
 
   return (
     <div>
-      <div className="px-4 h-16 flex justify-between items-center mb-4 border-4 rounded-2xl dark:border-slate-600">
+      <GPTHubNote />
+      <div className="mt-4 px-4 h-16 flex justify-between items-center mb-4 border-4 rounded-2xl dark:border-slate-600">
         <b>Total: {list.length}</b>
         <input
           className="input input-bordered input-sm"
