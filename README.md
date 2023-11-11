@@ -11,6 +11,11 @@
 > **Note:**\
 > Please exercise caution when using data obtained from the internet. Ensure the protection of your personal information to avoid falling prey to scams.
 
+Website: [gpthub.nofwl.com](https://gpthub.nofwl.com)
+Try GPT: **[FindGPT](https://chat.openai.com/g/g-e2bIguMqf-findgpt)**
+
+![GPTHub Light Mode](assets/4.png)
+![GPTHub Dark Mode](assets/5.png)
 
 ## Features
 
@@ -20,7 +25,7 @@
 - Continuous and uninterrupted updates
 - ...
 
-## Preview
+## Website Preview
 
 ![GPTHub Light Mode](assets/1.png)
 ![GPTHub Dark Mode](assets/2.png)

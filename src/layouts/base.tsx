@@ -45,17 +45,32 @@ export default function BaseLayout() {
           onClick={() => navigate('/')}
         />
         <div className="flex items-center gap-3">
-          <label className="swap swap-rotate w-[30px] h-[30px] cursor-default rounded">
+          <label className="swap swap-rotate w-[22px] h-[22px] cursor-default rounded">
             <input type="checkbox" checked={isDark} onChange={handleTheme} />
-            <SunIcon className="swap-off" size={30} />
-            <MoonIcon className="swap-on" size={30} />
+            <SunIcon className="swap-off" size={22} />
+            <MoonIcon className="swap-on" size={22} />
           </label>
           <a
             href="https://github.com/lencx/gpthub"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex w-[30px] h-[30px]"
+            title="GitHub"
           >
-            <GitHubIcon size={40} />
+            <GitHubIcon size={30} />
+          </a>
+          <a
+            href="https://chat.openai.com/g/g-e2bIguMqf-findgpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-[28px] h-[28px] border border-slate-300 rounded-full"
+            title="FindGPT by lencx"
+          >
+            <img
+              alt="FindGPT"
+              className="select-none rounded-full" src="/findgpt.png"
+              onClick={() => navigate('/')}
+            />
           </a>
           <a href="https://www.producthunt.com/posts/gpthub?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gpthub" target="_blank">
             <img
