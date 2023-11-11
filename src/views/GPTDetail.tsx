@@ -15,7 +15,7 @@ export default function GPTs() {
     return data?.gpts?.find((item) => item.id === params?.id);
   }, [params?.id]);
 
-  if (!gptInfo) return null;
+  if (!gptInfo?.id) return null;
 
   const link = gptLink(gptInfo.id);
 

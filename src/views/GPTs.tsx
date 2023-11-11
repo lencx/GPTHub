@@ -20,13 +20,13 @@ function fuzzySearchWithPerformance(list: GPTHub.GPTInfo[], regex: RegExp) {
 }
 
 export default function GPTs() {
-  const [list, setList] = useState(gptsData?.gpts || []);
+  const [list, setList] = useState(gptsData.gpts || []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedSearch = useCallback(debounce((searchTerm: string) => {
     const searchRegex = createSearchRegex(searchTerm);
-    const ids = fuzzySearchWithPerformance(gptsData.gpts, searchRegex);
-    setList(gptsData.gpts.filter((item) => ids.includes(item.id)));
+    const ids = fuzzySearchWithPerformance((gptsData.gpts as GPTHub.GPTInfo[]), searchRegex);
+    setList(gptsData.gpts.filter((item) => ids.includes(item?.id || '')));
   }, 500), []);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +48,10 @@ export default function GPTs() {
       </div>
       {list.length === 0 && <div className="flex h-80 justify-center items-center text-4xl font-bold text-slate-500">No Data</div>}
       <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-        {list?.map((item) => <GPTCard key={item.id} {...item} />)}
+        {list?.map((item) => {
+          if (!item.id) return null;
+          return <GPTCard key={item.id} {...item} />
+        })}
       </div>
     </div>
   );
