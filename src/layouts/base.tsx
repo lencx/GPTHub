@@ -38,10 +38,10 @@ export default function BaseLayout() {
 
   return (
     <div className="bg-base-100 text-slate-600 dark:text-slate-400">
-      <header className="fixed bg-base-100 px-8 top-0 z-30 flex h-16 w-full justify-between items-center bg-opacity-90 backdrop-blur transition-all duration-100 [transform:translate3d(0,0,0)] shadow-sm dark:shadow-slate-500/20">
+      <header className="fixed bg-base-100 px-4 lg:px-8 top-0 z-30 flex h-16 w-full justify-between items-center bg-opacity-90 backdrop-blur transition-all duration-100 [transform:translate3d(0,0,0)] shadow-sm dark:shadow-slate-500/20">
         <img
           alt="GPTHub"
-          className="w-12 h-12 select-none" src="/gpthub.png"
+          className="w-10 h-10 select-none" src="/gpthub.png"
           onClick={() => navigate('/')}
         />
         <div className="flex items-center gap-3">
@@ -54,33 +54,33 @@ export default function BaseLayout() {
             href="https://github.com/lencx/gpthub"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-[30px] h-[30px]"
+            className="flex w-[28px] h-[28px]"
             title="GitHub"
           >
-            <GitHubIcon size={30} />
+            <GitHubIcon size={28} />
           </a>
           <a
             href="https://chat.openai.com/g/g-e2bIguMqf-findgpt"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-[28px] h-[28px] border border-slate-300 rounded-full"
+            className="block w-[26px] h-[26px] border border-slate-300 rounded-full"
             title="FindGPT by lencx"
           >
             <img
               alt="FindGPT"
-              className="select-none rounded-full" src="/findgpt.png"
+              className="select-none rounded-full w-[26px]" src="/findgpt.png"
               onClick={() => navigate('/')}
             />
           </a>
           <a href="https://www.producthunt.com/posts/gpthub?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gpthub" target="_blank">
             <img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=424710&theme=light" alt="GPTHub | Product Hunt"
-              className="w-[180px]"
+              className="w-[140px]"
             />
           </a>
         </div>
       </header>
-      <main className="px-8 pt-[100px]">
+      <main className="px-6 pt-[100px] lg:max-w-screen-2xl m-auto">
         <Routes />
       </main>
       <BackTop />
