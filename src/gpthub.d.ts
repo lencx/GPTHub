@@ -2,7 +2,7 @@ declare namespace GPTHub {
   export interface GPTInfo {
     id: string;
     name: string;
-    logo: string;
+    logo?: string | null;
     author?: string | null;
     description?: string | null;
     updated_at?: string | null;

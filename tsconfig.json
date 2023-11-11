@@ -26,6 +26,7 @@
       "@@/*": ["./*"],
       "@/*": ["src/*"],
       "@views/*": ["src/views/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@icons/*": ["src/icons/*"],
       "@components/*": ["src/components/*"],
     },
