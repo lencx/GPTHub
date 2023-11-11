@@ -11,8 +11,8 @@ export default function GPTCard(gptInfo: GPTHub.GPTInfo) {
   const navigate = useNavigate();
 
   return (
-    <div className="card card-side shadow-md transition duration-500 ease-in-out shadow-slate-500/30">
-      <figure className="pl-6 w-[100px] min-w-[100px] max-w-[100px]">
+    <div className="card card-compact lg:card-side shadow-md transition duration-500 ease-in-out shadow-slate-500/30">
+      <figure className="pl-5 w-[100px] min-w-[100px] max-w-[100px] m-auto mt-4 mb-2 lg:mt-2">
         <LazyLoadImage className="rounded-full" src={gptLogo(logo)} alt={name} />
       </figure>
       <div className="card-body">

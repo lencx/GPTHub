@@ -65,11 +65,11 @@ export default function BaseLayout() {
           </a>
         </div>
       </header>
-      <main className="pt-[80px]">
+      <main className="px-8 pt-[100px]">
         <Routes />
       </main>
       <BackTop />
-      <footer></footer>
+      <footer className="h-10"></footer>
     </div>
   )
 }

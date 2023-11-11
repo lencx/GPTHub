@@ -19,7 +19,7 @@ export default function GPTs() {
   const link = gptLink(gptInfo.id);
 
   return (
-    <div className="p-10 max-w-6xl m-auto">
+    <div className="max-w-6xl m-auto">
       <div className="text-center text-4xl font-bold">{gptInfo.name}</div>
       <div className="flex justify-center items-end text-center mt-2 mb-10 gap-4">
         <span>By {gptInfo?.author || 'community builder'}</span>
