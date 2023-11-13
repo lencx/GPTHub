@@ -3,7 +3,7 @@
 <head>
   <title>Page Not Found</title>
   <script>
-    window.location.replace('/index.html' + '?path=' + window.location.pathname);
+    window.location.replace('/index.html' + '?uri=' + encodeURIComponent(window.location.href));
   </script>
 </head>
 <body>
