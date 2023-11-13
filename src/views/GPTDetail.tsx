@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
-import Giscus from '@giscus/react';
 
 import { gptLink } from '@/utils';
 import GPTTools from '@components/GPTTools';
