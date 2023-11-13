@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
+import { Helmet } from 'react-helmet';
 
 import { gptLink } from '@/utils';
 import GPTTools from '@components/GPTTools';
@@ -22,6 +23,9 @@ export default function GPTs() {
 
   return (
     <div className="max-w-6xl m-auto">
+      <Helmet>
+        <meta content={link} property="og:title" />
+      </Helmet>
       <div className="text-center text-4xl font-bold">{gptInfo.name}</div>
       <div className="flex justify-center items-end text-center mt-2 mb-10 gap-4">
         <span>By {gptInfo?.author || 'community builder'}</span>
