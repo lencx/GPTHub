@@ -17,7 +17,7 @@ export default function BaseLayout() {
       const params = new URLSearchParams(window.location.search);
       const path = params.get('path');
       if (path) {
-        navigate(`/${path}`);
+        navigate(`${window.location.origin}/${path}`);
       }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
