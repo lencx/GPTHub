@@ -12,17 +12,17 @@ export default function BaseLayout() {
   const [isDark, setDark] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (window.location.search) {
-      const params = new URLSearchParams(window.location.search);
-      const uri = params.get('uri');
-      if (uri) {
-        const url = decodeURIComponent(encodeURIComponent(uri));
-        navigate(new URL(url)?.pathname);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [window.location.search]);
+  // useEffect(() => {
+  //   if (window.location.search) {
+  //     const params = new URLSearchParams(window.location.search);
+  //     const uri = params.get('uri');
+  //     if (uri) {
+  //       const url = decodeURIComponent(encodeURIComponent(uri));
+  //       navigate(new URL(url)?.pathname);
+  //     }
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [window.location.search]);
 
   useEffect(() => {
     const theme = localStorage.getItem('theme');
