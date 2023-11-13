@@ -33,7 +33,7 @@ export default function Comments() {
       repoId="R_kgDOKrn4Tw"
       category="Comments"
       categoryId="DIC_kwDOF1L2fM4B-hVS"
-      mapping="url"
+      mapping="pathname"
       term="Welcome to GPTHub!"
       reactionsEnabled="1"
       emitMetadata="0"
