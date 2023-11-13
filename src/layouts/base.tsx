@@ -13,6 +13,17 @@ export default function BaseLayout() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      const path = params.get('path');
+      if (path) {
+        navigate(`/${path}`);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [window.location.search])
+
+  useEffect(() => {
     const theme = localStorage.getItem('theme');
     const isDark2 = theme === 'dracula';
     setDark(isDark2);

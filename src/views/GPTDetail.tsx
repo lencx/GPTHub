@@ -1,5 +1,5 @@
-import { useLayoutEffect, useMemo } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useMemo } from 'react';
+import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 import { gptLink } from '@/utils';
@@ -11,11 +11,6 @@ import data from '@@/gpthub.json';
 
 export default function GPTs() {
   const params = useParams();
-  const navigate = useNavigate();
-
-  useLayoutEffect(() => {
-    navigate(`/gpts/${params?.id}`)
-  }, [params?.id, navigate])
 
   const gptInfo = useMemo(() => {
     return data?.gpts?.find((item) => item.id === params?.id);
