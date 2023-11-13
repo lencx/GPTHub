@@ -46,13 +46,16 @@ export default function GPTs() {
           onChange={handleSearch}
         />
       </div>
-      {list.length === 0 && <div className="flex h-80 justify-center items-center text-4xl font-bold text-slate-500">No Data</div>}
-      <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-        {list?.map((item) => {
-          if (!item.id) return null;
-          return <GPTCard key={item.id} {...item} />
-        })}
-      </div>
+      {list.length === 0 ? (
+        <div className="flex h-80 justify-center items-center text-4xl font-bold text-slate-500">No Data</div>
+      ) : (
+        <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+          {list?.map((item) => {
+            if (!item.id) return null;
+            return <GPTCard key={item.id} {...item} />
+          })}
+        </div>
+      )}
     </div>
   );
 }
