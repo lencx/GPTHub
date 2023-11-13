@@ -18,7 +18,7 @@ export default function BaseLayout() {
       const uri = params.get('uri');
       if (uri) {
         const url = decodeURIComponent(encodeURIComponent(uri));
-        navigate(url);
+        navigate(new URL(url)?.pathname);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
