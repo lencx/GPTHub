@@ -1,11 +1,13 @@
 import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
+import Giscus from '@giscus/react';
 
 import { gptLink } from '@/utils';
 import GPTTools from '@components/GPTTools';
 import GPTPrompts from '@components/GPTPrompts';
 import GPTHubNote from '@components/GPTHubNote';
+import Comments from '@components/Comments'
 import data from '@@/gpthub.json';
 
 export default function GPTs() {
@@ -48,6 +50,9 @@ export default function GPTs() {
           className="pointer-events-auto absolute inset-0 w-full h-full"
           rel="noopener noreferrer"
         />
+      </div>
+      <div className="mt-10">
+        <Comments />
       </div>
     </div>
   );

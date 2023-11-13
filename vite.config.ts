@@ -9,6 +9,11 @@ export default defineConfig({
     tsconfigPaths(),
     react(),
     splitVendorChunkPlugin(),
-    VitePWA(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      // devOptions: {
+      //   enabled: true,
+      // },
+    }),
   ],
 })

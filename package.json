@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@giscus/react": "^2.3.0",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "lodash": "^4.17.21",
