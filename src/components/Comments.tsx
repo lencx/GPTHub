@@ -28,11 +28,10 @@ export default function Comments() {
 
   return (
     <Giscus
-      id="comments"
       repo="lencx/gpthub"
       repoId="R_kgDOKrn4Tw"
       category="Comments"
-      categoryId="DIC_kwDOF1L2fM4B-hVS"
+      categoryId="DIC_kwDOKrn4T84Ca5ph"
       mapping="pathname"
       term="Welcome to GPTHub!"
       reactionsEnabled="1"
